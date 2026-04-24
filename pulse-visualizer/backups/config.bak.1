@@ -1,0 +1,172 @@
+oscilloscope:
+  flip_x: false
+  edge_compression:
+    enabled: false
+    range: 0.1
+  pitch:
+    follow: true
+    cycles: 0
+    min_cycle_time: 16
+    type: zero_crossing
+    alignment: center
+  lowpass:
+    enabled: false
+    order: 4
+    cutoff: 4000
+  spline:
+    segments: 4
+    tension: 1
+  beam_multiplier: 1
+  window: 50
+  bandpass:
+    bandwidth: 10
+    sidelobe: 60
+  rotation: 0
+
+waveform:
+  midline: false
+  window: 2
+  low_mid_split_hz: 250
+  mid_high_split_hz: 2000
+  slope: 1
+  mode: stereo
+
+fft:
+  flip_x: false
+  markers: false
+  cursor: false
+  readout_header: true
+  smoothing:
+    enabled: true
+    fall_speed: 50
+    hover_fall_speed: 10
+    rise_speed: 500
+  cqt:
+    enabled: true
+    bins_per_octave: 60
+  sphere:
+    enabled: false
+    max_freq: 5000
+    base_radius: 0.1
+  size: 4096
+  beam_multiplier: 1
+  slope: 3
+  limits:
+    max_db: 0
+    max_freq: 22000
+    min_db: -60
+    min_freq: 10
+  key: sharp
+  mode: midside
+  frequency_scale: mel
+  rotation: 0
+
+spectrogram:
+  iterative_reassignment: false
+  window: 2
+  slope: 2
+  limits:
+    min_freq: 10
+    max_freq: 4000
+    max_db: -10
+    min_db: -60
+  frequency_scale: mel
+
+window:
+  decorations: true
+  always_on_top: false
+  wayland: true
+  default_width: 1920
+  default_height: 720
+  fps_limit: 60
+  theme: mocha.txt
+
+debug:
+  log_fps: false
+  show_bandpassed: false
+
+phosphor:
+  enabled: true
+  beam:
+    rainbow: false
+    energy: 50
+  screen:
+    aa_size: 4
+    decay:
+      fast_frames: 2
+      slow_frames: 60
+      threshold: 0.3
+    curvature: 0.18000007
+    gap: 0.03
+    vignette: 0.3
+    chromatic_aberration: 0.0030000024
+    grain: 0.1
+  blur:
+    radius: 128
+    intensity: 0.3
+  reflections:
+    strength: 0.7
+
+vu:
+  momentum:
+    enabled: true
+    spring_constant: 500
+    damping_ratio: 10
+  window: 100
+  calibration_db: 3
+  needle_width: 2
+  style: digital
+  scale: log
+
+lissajous:
+  spline:
+    segments: 10
+    tension: 1
+  beam_multiplier: 1
+  mode: normal
+  rotation: 0
+
+audio:
+  silence_threshold: -60
+  sample_rate: 44100
+  gain_db: 0
+  engine: pipewire
+  device: default
+
+lufs:
+  mode: momentary
+  scale: log
+  label: compact
+
+font: ~/.local/share/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Medium.ttf
+
+visualizers:
+  main:
+    type: vsplit
+    ratio: 0.666
+    children:
+      - type: hsplit
+        ratio: 0.8198198
+        children:
+          - type: hsplit
+            ratio: 0.21978022
+            children:
+              - type: hsplit
+                ratio: 0.375
+                children:
+                  - id: vu
+                  - id: lufs
+              - id: lissajous
+          - type: hsplit
+            ratio: 0.5
+            children:
+              - id: oscilloscope
+              - id: spectrum_analyzer
+      - type: hsplit
+        ratio: 0.5
+        children:
+          - id: waveform
+          - id: spectrogram
+
+plugins:
+  {}

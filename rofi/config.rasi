@@ -1,0 +1,8 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "JetBrainsMono Nerd Font 12";
+ combi-modi: "window,drun,ssh";
+ icon-theme: "MacTahoe-dark";
+ show-icons: true;
+ }
+@theme "gruvbox-dark"
