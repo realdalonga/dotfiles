@@ -1,0 +1,72 @@
+# Japanese Observatory Night
+# late summer · outskirts · warm instruments · indigo sky
+
+shell /bin/zsh
+remember_window_size no
+initial_window_width 640
+initial_window_height 360
+confirm_os_window_close 0
+
+font_family      JetBrainsMono Nerd Font Mono
+bold_font        auto
+italic_font      auto
+font_size        14.0
+enable_ligatures yes
+
+dim_opacity 0.88
+
+# Core
+foreground       #d4a96a
+background       #141210
+selection_foreground #1a1510
+selection_background #7a3b1e
+cursor           #c8b560
+
+# Borders
+window_border_width    2
+window_margin_width    8
+active_border_color    #c87533
+inactive_border_color  #3a2010
+
+# Tabs
+active_tab_foreground   #141210
+active_tab_background   #c8b560
+inactive_tab_foreground #5c4f3a
+inactive_tab_background #201c16
+
+# black
+color0   #1a1510
+color8   #3a3020
+
+# red — ember, not alarm
+color1   #c0502a
+color9   #d4683a
+
+# green — moss and phosphor
+color2   #7a8c3e
+color10  #a8c050
+
+# yellow — amber instrument glow
+color3   #b07820
+color11  #c8b560
+
+# blue — night sky indigo
+color4   #4a5c8a
+color12  #7a8cbf
+
+# magenta — faded rose, old paper label
+color5   #8a5a6a
+color13  #b87a8a
+
+# cyan — muted instrument teal
+color6   #4a8a72
+color14  #70c0a0
+
+# white — warm paper
+color7   #c8a870
+color15  #e0c898
+
+cursor_shape block
+cursor_blink_interval 0.65
+scrollback_lines 10000
+force_ltr yes
