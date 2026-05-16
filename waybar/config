@@ -8,9 +8,9 @@
   "passthrough": false,
   "fixed-center": true,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["mpris"],
+  "modules-center": [],
   "modules-right": [
-    "cpu",
+    "battery",
     "memory",
     "pulseaudio",
     "clock",
@@ -35,10 +35,10 @@
   },
   "clock#simpleclock": {
     "tooltip": false,
-    "format": " {:%H:%M}",
+    "format": "   {:%H:%M}",
   },
   "clock": {
-    "format": " {:L%a %d %b}",
+    "format": "   {:L%a %d %b}",
     "calendar": {
       "format": {
         "days": "<span weight='normal'>{}</span>",
@@ -53,17 +53,24 @@
     },
     "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
   },
-  "cpu": {
-    "format": " {usage}%",
-    "tooltip": true,
-    "interval": 1,
+  "battery": {
+    "states": {
+            		"warning": 30,
+            		"critical": 15
+        	},
+        	"format": "󰂀 {capacity}%",
+        	"format-charging": "󰂄 {capacity}%",
+        	"format-plugged": "󱟦 {capacity}%",
+        	"format-alt": "{time} {icon}",
+        	"format-full": "󱟢 {capacity}%",
+        	"format-icons": ["", "", ""]
   },
   "memory": {
-    "format": " {used:0.1f}Gi",
+    "format": "    {used:0.1f}Gi",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "  muted",
+    "format-muted": "    muted",
     "format-icons": {
       "headphone": "",
       "default": [" ", " ", " "],

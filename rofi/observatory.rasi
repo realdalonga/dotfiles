@@ -1,0 +1,113 @@
+* {
+    /* === your palette === */
+    bg:       #151515;
+    surface:  #2f2f2f;
+    dim:      #555555;
+    fg:       #c0b18bff;
+    teal:     #22c3a1ff;
+    cyan:     #84edb9ff;
+    red:      #cd950c;
+    urgent:   #d4d232;
+
+    /* === wiring === */
+    background-color: transparent;
+    text-color:       @fg;
+    border-color:     @teal;
+    // font:             "JetBrainsMono Nerd Font Mono 13";
+}
+
+window {
+    background-color: @bg;
+    border:           2px;
+    border-color:     @teal;
+    border-radius:    6px;
+    width:            480px;
+    padding:          0;
+}
+
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, listview ];
+    spacing:          0;
+}
+
+inputbar {
+    background-color: @surface;
+    text-color:       @teal;
+    padding:          10px 14px;
+    border-radius:    4px 4px 0 0;
+    border:           0 0 1px 0;
+    border-color:     #4A0D16;
+    children:         [ prompt, entry ];
+    spacing:          8px;
+}
+
+prompt {
+    text-color:       @urgent;
+    background-color: transparent;
+}
+
+entry {
+    text-color:       @teal;
+    background-color: transparent;
+    cursor:           text;
+    placeholder:      "search...";
+    placeholder-color: @dim;
+}
+
+listview {
+    background-color: @bg;
+    padding:          6px 0;
+    lines:            8;
+    scrollbar:        false;
+    spacing:          0;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @fg;
+    padding:          8px 14px;
+    border-radius:    3px;
+    spacing:          10px;
+    orientation:      horizontal;
+}
+
+element selected.normal {
+    background-color: @surface;
+    text-color:       @cyan;
+    border:           0 0 0 2px;
+    border-color:     @teal;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             1.2em;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element urgent {
+    text-color: @red;
+}
+
+element active {
+    text-color: @teal;
+}
+
+message {
+    background-color: @surface;
+    border:           1px;
+    border-color:     #4A0D16;
+    border-radius:    4px;
+    padding:          8px 14px;
+    margin:           4px;
+}
+
+textbox {
+    text-color:       @cyan;
+    background-color: transparent;
+}

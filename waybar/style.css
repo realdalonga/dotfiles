@@ -1,7 +1,7 @@
 * {
   min-height: 0;
   min-width: 0;
-  font-family: Lexend, "JetBrainsMono";
+  font-family: Lexend, "CaskaydiaCoveMono";
   font-size: 16px;
   font-weight: 600;
 }
@@ -9,34 +9,30 @@
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
-  /* background-color: #1e1e2e; */
   background-color: #151515;
-  /* background-color: #15151a; */
-  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
 #workspaces button {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  background-color: #181818;
-  /* background-color: #1e1e2e; */
-  color: #cdd6f4;
+  background-color: #2f2f2f;
+  color: #c0b18b;
 }
 
 #workspaces button:hover {
   color: #151515;
-  background-color: #cdd6f4;
+  background-color: #c0b18b;
 }
 
 #workspaces button.active {
-  background-color: #151515;
-  color: #89b4fa;
+  background-color: #2f2f2f;
+  color: #22c3a1;
 }
 
 #workspaces button.urgent {
-  background-color: #151515;
-  color: #f38ba8;
+  background-color: #2f2f2f;
+  color: #d75f5f;
 }
 
 #clock,
@@ -45,7 +41,7 @@ window#waybar {
 #custom-power,
 #custom-spotify,
 #custom-notification,
-#cpu,
+#battery,
 #tray,
 #memory,
 #window,
@@ -53,21 +49,20 @@ window#waybar {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
   border-radius: 6px;
-  background-color: #181818;
-  /* background-color: #1e1e2e; */
+  background-color: #2f2f2f;
 }
 
 #mpris.playing {
-  color: #a6e3a1;
+  color: #8fee96;
 }
 
 #mpris.paused {
-  color: #9399b2;
+  color: #555555;
 }
 
 #custom-sep {
   padding: 0px;
-  color: #585b70;
+  color: #555555;
 }
 
 window#waybar.empty #window {
@@ -75,42 +70,42 @@ window#waybar.empty #window {
 }
 
 #cpu {
-  color: #94e2d5;
+  color: #84edb9;
 }
 
 #memory {
-  color: #cba6f7;
+  color: #775759;
 }
 
 #clock {
-  color: #74c7ec;
+  color: #22c3a1;
 }
 
 #clock.simpleclock {
-  color: #89b4fa;
+  color: #22c3a1;
 }
 
 #window {
-  color: #cdd6f4;
+  color: #c0b18b;
 }
 
 #pulseaudio {
-  color: #b4befe;
+  color: #84edb9;
 }
 
 #pulseaudio.muted {
-  color: #a6adc8;
+  color: #555555;
 }
 
 #custom-logo {
-  color: #89b4fa;
+  color: #22c3a1;
 }
 
 #custom-power {
-  color: #f38ba8;
+  color: #d75f5f;
 }
 
 tooltip {
-  background-color: #181818;
-  border: 2px solid #89b4fa;
+  background-color: #2f2f2f;
+  border: 2px solid #D7263D;
 }

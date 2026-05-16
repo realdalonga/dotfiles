@@ -1,8 +1,9 @@
 configuration {
  modi: "window,drun,ssh,combi";
- font: "JetBrainsMono Nerd Font 12";
+ font: "CaskaydiaCove Nerd Font 13";
  combi-modi: "window,drun,ssh";
- icon-theme: "MacTahoe-dark";
+ icon-theme: "Papirus-Dark";
  show-icons: true;
  }
-@theme "gruvbox-dark"
+// @theme "gruvbox-dark"
+@theme "~/.config/rofi/observatory.rasi"
